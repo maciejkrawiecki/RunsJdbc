@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface RunDao {
 
-    void save (Run member) throws SQLException;
-    void update (Run member) throws SQLException;
+    void save (Run run) throws SQLException;
+    void update (Run run) throws SQLException;
     void delete (Integer id) throws SQLException;
     Run getBy (Integer id) throws SQLException;
     List<Run> getAll() throws SQLException;
