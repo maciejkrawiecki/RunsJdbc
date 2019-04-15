@@ -7,18 +7,19 @@ import maciejkrawiecki.util.JdbcUtils;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class RunDaoImpl implements RunDao {
 
-    private PreparedStatement prepareStatement (String sql) throws SQLException{
+    private PreparedStatement prepareStatement(String sql) throws SQLException {
         return JdbcUtils
-               .getInstance()
-               .getConnection()
+                .getInstance()
+                .getConnection()
                 .prepareStatement(sql);
     }
 
-    private Run createRun(ResultSet resultSet) throws SQLException{
+    private Run createRun(ResultSet resultSet) throws SQLException {
         Run run = new Run();
         run.setId(resultSet.getInt("id"));
         run.setName(resultSet.getString("name"));
@@ -35,8 +36,8 @@ public class RunDaoImpl implements RunDao {
 
         statement.setInt(1, run.getId());
         statement.setString(2, run.getName());
-        statement.setString(3,run.getPlace());
-        statement.setInt(4,run.getMembersLimit());
+        statement.setString(3, run.getPlace());
+        statement.setInt(4, run.getMembersLimit());
 
         statement.executeUpdate();
 
@@ -47,16 +48,23 @@ public class RunDaoImpl implements RunDao {
 
         PreparedStatement statement = prepareStatement(sql);
 
-        statement.setString(1,run.getName());
-        statement.setString(2,run.getPlace());
-        statement.setInt(3,run.getMembersLimit());
-        statement.setInt(4,run.getId());
+        statement.setString(1, run.getName());
+        statement.setString(2, run.getPlace());
+        statement.setInt(3, run.getMembersLimit());
+        statement.setInt(4, run.getId());
 
         statement.executeUpdate();
     }
 
     public void delete(Integer id) throws SQLException {
 
+        String sql = "DELETE FROM runs WHERE id = ?";
+
+        PreparedStatement statement = prepareStatement(sql);
+
+        statement.setInt(1, id);
+
+        statement.execute();
     }
 
 
@@ -67,15 +75,31 @@ public class RunDaoImpl implements RunDao {
                 .getConnection()
                 .prepareStatement(sql);
 
-        statement.setInt(1,id);
+        statement.setInt(1, id);
 
         ResultSet resultSet = statement.executeQuery();
 
-        if (resultSet.next()) return  createRun(resultSet);
+        if (resultSet.next()) return createRun(resultSet);
         return null;
     }
 
     public List<Run> getAll() throws SQLException {
-        return null;
+        String sql = "SELECT * FROM runs";
+        List<Run> runs = new ArrayList<>();
+
+        ResultSet resultSet = JdbcUtils
+                .getInstance()
+                .getConnection()
+                .createStatement()
+                .executeQuery(sql);
+
+        while (resultSet.next()) {
+
+            Run run = createRun(resultSet);
+            if (run != null) {
+                runs.add(run);
+            }
+        }
+        return runs;
     }
 }
