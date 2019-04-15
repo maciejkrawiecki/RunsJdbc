@@ -20,7 +20,7 @@ class RunDaoImplTest {
 
         Run run = new Run();
 
-        run.setId(2);
+        run.setId(14);
         run.setName("first run");
         run.setPlace("krakow");
         run.setMembersLimit(100);
@@ -29,7 +29,7 @@ class RunDaoImplTest {
 
         try {
             runDao.save(run);
-            Run testRun = runDao.getBy(2);
+            Run testRun = runDao.getBy(14);
 
             // then
 
@@ -58,14 +58,14 @@ class RunDaoImplTest {
 
         Run run = new Run();
 
-        run.setId(3);
+        run.setId(12);
         run.setName("second run");
         run.setPlace("sanok");
         run.setMembersLimit(100);
 
         Run runUpdate = new Run();
 
-        runUpdate.setId(3);
+        runUpdate.setId(12);
         runUpdate.setName("updated run");
         runUpdate.setPlace("wroclaw");
         runUpdate.setMembersLimit(1000);
@@ -76,7 +76,7 @@ class RunDaoImplTest {
             // when
 
             runDao.update(runUpdate);
-            Run runGetUpdated = runDao.getBy(3);
+            Run runGetUpdated = runDao.getBy(12);
 
             // then
 

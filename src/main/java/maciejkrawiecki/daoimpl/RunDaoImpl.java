@@ -43,7 +43,7 @@ public class RunDaoImpl implements RunDao {
     }
 
     public void update(Run run) throws SQLException {
-        String sql = "UPDATE runs SET (name=?, place=?, members_limit=?) WHERE id =?";
+        String sql = "UPDATE runs SET name = ?, place = ?, members_limit = ? WHERE id = ?";
 
         PreparedStatement statement = prepareStatement(sql);
 
@@ -58,7 +58,6 @@ public class RunDaoImpl implements RunDao {
     public void delete(Integer id) throws SQLException {
 
     }
-
 
 
     public Run getBy(Integer id) throws SQLException {
