@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2192cdcc-0e4b-4c17-8bbc-19298beedddd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/maciejkrawiecki/daoimpl/RunDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/maciejkrawiecki/daoimpl/RunDaoImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/maciejkrawiecki/daoimpl/MemberDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/maciejkrawiecki/dao/RunDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/maciejkrawiecki/dao/RunDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maciejkrawiecki/util/JdbcUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maciejkrawiecki/util/JdbcUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/maciejkrawiecki/daoimpl/RunDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/maciejkrawiecki/daoimpl/RunDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/maciejkrawiecki/daoimpl/RunDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/maciejkrawiecki/daoimpl/RunDaoImplTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -115,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/maciejkrawiecki/daoimpl/RunDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+            <state relative-caret-position="228">
+              <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,11 +123,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/maciejkrawiecki/daoimpl/MemberDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/maciejkrawiecki/daoimpl/RunDaoImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+            <state relative-caret-position="839">
+              <caret line="83" column="84" selection-start-line="83" selection-start-column="84" selection-end-line="83" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -165,8 +173,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -256,6 +264,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="maciejkrawiecki" type="462c0819:PsiDirectoryNode" />
+              <item name="daoimpl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RunsJDBC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RunsJDBC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="maciejkrawiecki" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -272,6 +289,21 @@
               <item name="RunsJDBC" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RunsJDBC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RunsJDBC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RunsJDBC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RunsJDBC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="daoimpl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RunsJDBC" type="b2602c69:ProjectViewProjectNode" />
@@ -313,7 +345,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RunDaoImplTest.save">
+  <component name="RunManager" selected="JUnit.RunDaoImplTest.update">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="maciejkrawiecki.App" />
       <module name="RunsJDBC" />
@@ -343,8 +375,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RunDaoImplTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RunsJDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maciejkrawiecki.daoimpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="maciejkrawiecki.daoimpl" />
+      <option name="MAIN_CLASS_NAME" value="maciejkrawiecki.daoimpl.RunDaoImplTest" />
+      <option name="METHOD_NAME" value="update" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RunDaoImplTest.update" />
         <item itemvalue="JUnit.RunDaoImplTest.save" />
         <item itemvalue="Application.App" />
       </list>
@@ -368,23 +417,43 @@
       <option name="project" value="LOCAL" />
       <updated>1555322911985</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added implementations of 'save' and 'get by id' methods, changed wrong names of method parameters, added tests">
+      <created>1555324866151</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1555324866151</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
     <history-entry file="RunDaoImplTest_save - 2019.04.15 at 12h 30m 20s.xml">
       <configuration name="RunDaoImplTest.save" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RunDaoImplTest_save - 2019.04.15 at 12h 44m 35s.xml">
+      <configuration name="RunDaoImplTest.save" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RunDaoImplTest_save - 2019.04.15 at 12h 50m 16s.xml">
+      <configuration name="RunDaoImplTest.save" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RunDaoImplTest_save - 2019.04.15 at 12h 53m 02s.xml">
+      <configuration name="RunDaoImplTest.save" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RunDaoImplTest_save - 2019.04.15 at 12h 53m 34s.xml">
+      <configuration name="RunDaoImplTest.save" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29399142" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Statistic" />
@@ -393,7 +462,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19638555" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19638555" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -410,7 +479,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added DAO interfaces and entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="added DAO interfaces and entities" />
+    <MESSAGE value="added implementations of 'save' and 'get by id' methods, changed wrong names of method parameters, added tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added implementations of 'save' and 'get by id' methods, changed wrong names of method parameters, added tests" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
@@ -523,10 +593,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/maciejkrawiecki/daoimpl/MemberDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/maciejkrawiecki/daoimpl/RunDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+        <state relative-caret-position="228">
+          <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -535,8 +612,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/maciejkrawiecki/daoimpl/RunDaoImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+        <state relative-caret-position="839">
+          <caret line="83" column="84" selection-start-line="83" selection-start-column="84" selection-end-line="83" selection-end-column="84" />
         </state>
       </provider>
     </entry>

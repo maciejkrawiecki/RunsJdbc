@@ -6,7 +6,8 @@ import org.junit.jupiter.api.Test;
 
 import java.sql.SQLException;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 class RunDaoImplTest {
 
@@ -19,7 +20,7 @@ class RunDaoImplTest {
 
         Run run = new Run();
 
-        run.setId(1);
+        run.setId(2);
         run.setName("first run");
         run.setPlace("krakow");
         run.setMembersLimit(100);
@@ -28,7 +29,7 @@ class RunDaoImplTest {
 
         try {
             runDao.save(run);
-            Run testRun = runDao.getBy(1);
+            Run testRun = runDao.getBy(2);
 
             // then
 
@@ -40,10 +41,54 @@ class RunDaoImplTest {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        try {
+            assertNull(runDao.getBy(99));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
     void update() {
+
+        // given
+
+        RunDao runDao = new RunDaoImpl();
+
+        Run run = new Run();
+
+        run.setId(3);
+        run.setName("second run");
+        run.setPlace("sanok");
+        run.setMembersLimit(100);
+
+        Run runUpdate = new Run();
+
+        runUpdate.setId(3);
+        runUpdate.setName("updated run");
+        runUpdate.setPlace("wroclaw");
+        runUpdate.setMembersLimit(1000);
+
+        try {
+            runDao.save(run);
+
+            // when
+
+            runDao.update(runUpdate);
+            Run runGetUpdated = runDao.getBy(3);
+
+            // then
+
+            assertEquals(runUpdate.getId(),runGetUpdated.getId());
+            assertEquals(runUpdate.getName(),runGetUpdated.getName());
+            assertEquals(runUpdate.getPlace(),runGetUpdated.getPlace());
+            assertEquals(runUpdate.getMembersLimit(),runGetUpdated.getMembersLimit());
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Test

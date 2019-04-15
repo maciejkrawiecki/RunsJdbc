@@ -11,29 +11,11 @@ import java.util.List;
 
 public class RunDaoImpl implements RunDao {
 
-    public void save(Run run) throws SQLException {
-        String sql = "INSERT INTO runs (id, name, place, members_limit) VALUES (?,?,?,?)";
-
-        PreparedStatement statement = JdbcUtils
-                .getInstance()
-                .getConnection()
+    private PreparedStatement prepareStatement (String sql) throws SQLException{
+        return JdbcUtils
+               .getInstance()
+               .getConnection()
                 .prepareStatement(sql);
-
-        statement.setInt(1, run.getId());
-        statement.setString(2, run.getName());
-        statement.setString(3,run.getPlace());
-        statement.setInt(4,run.getMembersLimit());
-
-        statement.execute();
-
-    }
-
-    public void update(Run run) throws SQLException {
-
-    }
-
-    public void delete(Integer id) throws SQLException {
-
     }
 
     private Run createRun(ResultSet resultSet) throws SQLException{
@@ -45,6 +27,39 @@ public class RunDaoImpl implements RunDao {
 
         return run;
     }
+
+    public void save(Run run) throws SQLException {
+        String sql = "INSERT INTO runs (id, name, place, members_limit) VALUES (?,?,?,?)";
+
+        PreparedStatement statement = prepareStatement(sql);
+
+        statement.setInt(1, run.getId());
+        statement.setString(2, run.getName());
+        statement.setString(3,run.getPlace());
+        statement.setInt(4,run.getMembersLimit());
+
+        statement.executeUpdate();
+
+    }
+
+    public void update(Run run) throws SQLException {
+        String sql = "UPDATE runs SET (name=?, place=?, members_limit=?) WHERE id =?";
+
+        PreparedStatement statement = prepareStatement(sql);
+
+        statement.setString(1,run.getName());
+        statement.setString(2,run.getPlace());
+        statement.setInt(3,run.getMembersLimit());
+        statement.setInt(4,run.getId());
+
+        statement.executeUpdate();
+    }
+
+    public void delete(Integer id) throws SQLException {
+
+    }
+
+
 
     public Run getBy(Integer id) throws SQLException {
         String sql = "SELECT * FROM runs WHERE id = ?";
